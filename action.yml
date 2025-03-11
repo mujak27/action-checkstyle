@@ -55,7 +55,7 @@ inputs:
     default: "checkstyle-action:latest"
 runs:
   using: 'docker'
-  image: 'docker://${{ inputs.image_tag }}'
+  image: 'docker://checkstyle-action:latest'
   
 
 # Ref: https://haya14busa.github.io/github-action-brandings/
