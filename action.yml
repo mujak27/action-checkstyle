@@ -49,9 +49,14 @@ inputs:
     description: |
       Location of the properties file relative to the root directory. This file serves as a means to resolve repetitive or predefined values within the checkstyle configuration file.
     default: ""
+  image_tag:
+    description: 'Docker image tag to use'
+    required: false
+    default: "checkstyle-action:latest"
 runs:
-  using: "docker"
-  image: "Dockerfile"
+  using: 'docker'
+  image: 'docker://${{ inputs.image_tag }}'
+  
 
 # Ref: https://haya14busa.github.io/github-action-brandings/
 branding:
